@@ -7,4 +7,4 @@
 # caches the old base image and uses that.
 # Use the hash tag last used in `make build` for base image, as output after
 # running that build
-FROM christadler/seismo-live:237c9773d04c0a6e1e55bb047a5697150e27
+FROM christadler/seismo-live:237c9773d04c
