@@ -1,0 +1,23 @@
+FROM jupyter/minimal-notebook:57ebe55c07d0
+
+MAINTAINER Iris Christadler <christadler@geophysik.uni-muenchen.de
+
+# Jupyterhub 2.3.1 is already installed
+#ARG JUPYTERHUB_VERSION=2.3.1
+#RUN pip3 install --no-cache jupyterhub==$JUPYTERHUB_VERSION
+
+RUN conda install --yes 'obspy=1.3.0'
+RUN conda install cartopy --yes
+RUN conda install nbgitpuller --yes
+#RUN conda install instaseis --yes
+
+
+RUN rm -rf /home/jovyan/work
+ADD Course_Participant.ipynb /home/jovyan/
+USER root
+RUN chown -R jovyan:users /home/jovyan
+USER jovyan
+
+
+# Ignore all Pythonwarnings to hide them from the user
+#ENV PYTHONWARNINGS ignore
