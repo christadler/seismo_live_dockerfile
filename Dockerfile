@@ -9,5 +9,6 @@
 # running that build
 #FROM christadler/seismo-live:a211566746d7
 #Test from Test_GithubActions Repository
-FROM christadler/seismo-live:main-1993007
-
+#FROM christadler/seismo-live:main-1993007
+# Test for IGPP22 course
+FROM christadler/igpp22:latest
