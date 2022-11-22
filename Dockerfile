@@ -11,4 +11,4 @@
 #Test from Test_GithubActions Repository
 #FROM christadler/seismo-live:main-1993007
 # Test for IGPP22 course
-FROM christadler/igpp22:latest
+FROM christadler/seismo-live:main-20221122a
